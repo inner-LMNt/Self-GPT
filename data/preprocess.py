@@ -1,25 +1,15 @@
 import argparse
 import json
-
-class Tokenizer:
-    def __init__(self):
-        pass
-
-    def encode(self, text): # character level tokenization
-        chars = list(" !\"#$%&'()*+,-./0123456789:;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~")
-        tokens = [chars.index(c) for c in text]
-        return tokens
+from tokenizer import Tokenizer
 
 def load_data(file_path):
     file_path = './raw/' + file_path + '.txt'
-
     with open(file_path, 'r', encoding='utf-8') as f:
         data = f.read()
     return data
 
 def save_data(data, file_path):
     file_path = './processed/' + file_path + '.json'
-
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 

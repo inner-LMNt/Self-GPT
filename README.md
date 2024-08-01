@@ -1,10 +1,12 @@
+```
 self-gpt/
 │
 ├── data/ ✓
 |   ├── processed/ ✓
 │   ├── raw/ ✓
 │   ├── samples/ ✓
-│   └── preprocess.py ✓
+│   ├── preprocess.py ✓
+|   └── tokenizer.py ✓
 |
 ├── models/
 │   ├── checkpoints/
@@ -22,3 +24,4 @@ self-gpt/
 ├── inference.py
 ├── README.md
 └── requirements.txt
+```
