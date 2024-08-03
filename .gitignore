@@ -1,2 +1,3 @@
-./data/processed/*
-./data/raw/*
+.vs/
+data/__pycache__/
+models/GPT/__pycache__/
