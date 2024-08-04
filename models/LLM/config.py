@@ -1,12 +1,17 @@
 import torch
+import os
+import sys
+
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
+from data.tokenizer import Tokenizer
 
 class Config:
     def __init__(self):
         # Model
-        self.vocab_size = 93
+        self.vocab_size = Tokenizer().vocab_size
         self.context_length = 16 #128, 512
         self.max_length = 1024
-        self.hidden_size = 768
+        self.hidden_size = 32 #768
         self.pdrop = 0.1
         self.num_layers = 12 # Transformer layers
         self.num_attention_heads = 12
@@ -29,8 +34,7 @@ class Config:
 
         # Save
         self.save_dir = "./data/samples"
-        
 
         # Misc
         self.seed = 1234
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

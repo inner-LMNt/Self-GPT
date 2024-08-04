@@ -22,6 +22,7 @@ def main(args):
     raw_data = load_data(args.file)
     processed_data = preprocess(raw_data, tokenizer)
     save_data(processed_data, args.file)
+    print("Finished")
     
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Preprocess a file's text data.")

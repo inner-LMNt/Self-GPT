@@ -1,25 +1,44 @@
 import torch
 
-from models.GPT.LLM import GPT, BigramLanguageModel, TrigramLanguageModel
+from models.LLM.config import Config
+from models.LLM.GPT import GPT
+from models.LLM.bigram import BigramLanguageModel
+from models.LLM.trigram import TrigramLanguageModel
 from data.tokenizer import Tokenizer
 
-def trigram_inference():
-    LLM = GPT()
+def bigram_inference():
+    config = Config()
+    LLM = BigramLanguageModel()
     tokenizer = Tokenizer()
-    config = LLM.config
 
-    m = TrigramLanguageModel(config.vocab_size)
-    m.load_state_dict(torch.load('models/checkpoints/trigram/model.pth', weights_only=True))
-    out = m.generate(torch.zeros((1, 2), dtype=torch.long), 5000)
-    out = out[:, 2:]
+    LLM.load_state_dict(torch.load('models/checkpoints/bigram/model.pth', weights_only=True))
+    context = "M"
+    context = torch.tensor([tokenizer.encode(context)], dtype=torch.long, device=config.device)
+    out = LLM.generate(context, 5000)
 
-    path = config.save_dir + '/trigram.txt'
+    path = config.save_dir + '/bigram_out.txt'
+    with open(path, 'w') as f:
+        f.write(tokenizer.decode(out.squeeze().tolist()))
+
+def trigram_inference():
+    config = Config()
+    LLM = TrigramLanguageModel()
+    tokenizer = Tokenizer()
+
+    LLM.load_state_dict(torch.load('models/checkpoints/trigram/model.pth', weights_only=True))
+    context = "Ma"
+    context = torch.tensor([tokenizer.encode(context)], dtype=torch.long, device=config.device)
+    out = LLM.generate(context, 5000)
+    
+    path = config.save_dir + '/trigram_out.txt'
     with open(path, 'w') as f:
         f.write(tokenizer.decode(out.squeeze().tolist()))
 
 
 def main():
-    trigram_inference()
+    bigram_inference()
+    # trigram_inference()
+    print("Finished")
 
 if __name__ == '__main__':
     main()

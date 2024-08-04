@@ -132,39 +132,39 @@ Manager: Anytime. Talk to you later!
 
 
 
-Manager: Good afternoon! How’s your day going?
+Manager: Good afternoon! How's your day going?
 
 Employee: Hi! It's going well, just got out of a meeting. How about you?
 
 Manager: Not too bad. I wanted to touch base on a couple of things. First, how's the new onboarding process going?
 
-Employee: It’s been smooth so far. The feedback from the new hires has been positive. They especially appreciated the mentorship program we set up.
+Employee: It's been smooth so far. The feedback from the new hires has been positive. They especially appreciated the mentorship program we set up.
 
-Manager: That's great to hear! Do you think there’s anything we could improve?
+Manager: That's great to hear! Do you think there's anything we could improve?
 
 Employee: Maybe we could streamline the IT setup. Some new hires had issues with getting their laptops configured on time.
 
-Manager: Good point. Let’s coordinate with IT to see if we can simplify the process. Also, I wanted to discuss our upcoming team-building event. Have any ideas?
+Manager: Good point. Let's coordinate with IT to see if we can simplify the process. Also, I wanted to discuss our upcoming team-building event. Have any ideas?
 
 Employee: I was thinking about a cooking class. It's something different and could be fun for everyone.
 
-Manager: That sounds fantastic! It’s a great way to bond and relax. I’ll start looking into options. Lastly, I wanted to discuss our quarterly goals. We’re a bit behind on the marketing campaign metrics. Any thoughts on how we can improve?
+Manager: That sounds fantastic! It's a great way to bond and relax. I'll start looking into options. Lastly, I wanted to discuss our quarterly goals. We're a bit behind on the marketing campaign metrics. Any thoughts on how we can improve?
 
-Employee: I think we could increase our social media presence. We’ve been a bit quiet there, and it's an area with potential growth.
+Employee: I think we could increase our social media presence. We've been a bit quiet there, and it's an area with potential growth.
 
 Manager: I agree. We should consider a dedicated social media manager to focus on that. Do you think we should also explore paid promotions?
 
 Employee: Yes, that could give us a quick boost. We should set a budget and test a few different ad formats.
 
-Manager: Sounds like a plan. Let’s put together a proposal for the budget and ad strategy. Anything else on your mind?
+Manager: Sounds like a plan. Let's put together a proposal for the budget and ad strategy. Anything else on your mind?
 
 Employee: Not much. Just thinking about how we can enhance our remote work setup. Some team members have mentioned feeling isolated.
 
-Manager: That’s important. Maybe we can schedule more virtual coffee breaks or informal check-ins to keep everyone connected.
+Manager: That's important. Maybe we can schedule more virtual coffee breaks or informal check-ins to keep everyone connected.
 
 Employee: I like that idea. It would help maintain a sense of community.
 
-Manager: Great. Let’s make it happen. Thanks for the updates and ideas. Keep me posted on the progress with the social media strategy.
+Manager: Great. Let's make it happen. Thanks for the updates and ideas. Keep me posted on the progress with the social media strategy.
 
 Employee: Will do. Thanks for the chat!
 
@@ -180,31 +180,31 @@ Manager: Doing well, thanks. I wanted to check in on the new product launch. How
 
 Employee: We're on track with the development, but we're facing some challenges with the supply chain. Some components are delayed.
 
-Manager: That’s concerning. Have we explored alternative suppliers?
+Manager: That's concerning. Have we explored alternative suppliers?
 
-Employee: Yes, we’ve found a few potential alternatives, but they’re a bit more expensive. We’re weighing the pros and cons.
+Employee: Yes, we've found a few potential alternatives, but they're a bit more expensive. We're weighing the pros and cons.
 
-Manager: Understood. Let’s prioritize securing the components to avoid delays, even if it means a slight increase in cost. We can adjust the budget accordingly.
+Manager: Understood. Let's prioritize securing the components to avoid delays, even if it means a slight increase in cost. We can adjust the budget accordingly.
 
-Employee: Agreed. I'll move forward with the alternative suppliers. On another note, we’ve been getting customer feedback about our support services. Some are mentioning long wait times.
+Employee: Agreed. I'll move forward with the alternative suppliers. On another note, we've been getting customer feedback about our support services. Some are mentioning long wait times.
 
-Manager: That’s not good. Do you have any suggestions on how we can improve?
+Manager: That's not good. Do you have any suggestions on how we can improve?
 
 Employee: I think we should consider expanding the support team or implementing a chatbot to handle common queries.
 
-Manager: A chatbot could be a great first step. It would help reduce the workload on our support team. Let’s research some options and see what fits our needs.
+Manager: A chatbot could be a great first step. It would help reduce the workload on our support team. Let's research some options and see what fits our needs.
 
-Employee: Sounds good. I’ll start looking into it. Also, I wanted to mention that the team has been feeling a bit overwhelmed with the workload lately.
+Employee: Sounds good. I'll start looking into it. Also, I wanted to mention that the team has been feeling a bit overwhelmed with the workload lately.
 
-Manager: That’s a concern. Do you think we need to hire additional staff, or are there tasks we can streamline?
+Manager: That's a concern. Do you think we need to hire additional staff, or are there tasks we can streamline?
 
 Employee: A bit of both. We could streamline some processes and maybe bring in a few freelancers for short-term help.
 
-Manager: Let’s evaluate our processes and see where we can optimize. We’ll also consider bringing in extra hands as needed. Anything else?
+Manager: Let's evaluate our processes and see where we can optimize. We'll also consider bringing in extra hands as needed. Anything else?
 
 Employee: That covers it for now. Thanks for the support.
 
-Manager: Anytime. Keep me posted on the product launch and support improvements. Let’s catch up again soon.
+Manager: Anytime. Keep me posted on the product launch and support improvements. Let's catch up again soon.
 
 Employee: Will do. Have a good one!
 

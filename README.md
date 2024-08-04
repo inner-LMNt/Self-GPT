@@ -1,5 +1,5 @@
 ```
-self-gpt/
+Self-GPT/
 │
 ├── data/ ✓
 |   ├── processed/ ✓
