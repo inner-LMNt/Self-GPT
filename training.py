@@ -17,11 +17,21 @@ def load_json(file):
 
 def n_gram(number=2):
     config = Config()
+    # torch.manual_seed(config.seed)
+
     if number == 2:
+        path = config.checkpoint_dir + '/bigram/shakespeare_model.pth'
         LLM = BigramLanguageModel().to(config.device)
     else:
+        path = config.checkpoint_dir + '/trigram/shakespeare_model.pth'
         LLM = TrigramLanguageModel().to(config.device)
-    # torch.manual_seed(config.seed)
+
+    try:
+        LLM.load_state_dict(torch.load(path, weights_only=True))
+        print("Model loaded successfully.")
+    except Exception as e:
+        print(f"Error loading model: {e}")
+        print("Training model from scratch...")
 
     data = load_json(config.data_dir + '/' + config.data_file)
     data = torch.tensor(data, dtype=torch.long)
@@ -39,24 +49,30 @@ def n_gram(number=2):
     print("Training...")
     start = time.time()
     optimizer = torch.optim.Adam(LLM.parameters(), lr=config.learning_rate)
-    for _ in range(100000): # 1000, 10000, 100000
+    for _ in range(10000):
         x, y = generate_batch(True)
         logits, loss = LLM.forward(x, y)
         optimizer.zero_grad(set_to_none=True)
         loss.backward() # Gradients
         optimizer.step() # Update weights
     
-    print(f"Loss: {loss.item()}")
+    print(f"Training loss: {loss.item()}, Validation loss: {LLM.forward(*generate_batch(False))[1].item()}")
     print(f"Training time: {time.time() - start} seconds")
     if number == 2:
-        path = config.checkpoint_dir + '/bigram/model.pth'
+        path = config.checkpoint_dir + '/bigram/shakespeare_model.pth'
     else:
-        path = config.checkpoint_dir + '/trigram/model.pth'
-    torch.save(LLM.state_dict(), path)
+        path = config.checkpoint_dir + '/trigram/shakespeare_model.pth'
+
+    print(f"Saving model to {path}")
+    try:
+        torch.save(LLM.state_dict(), path)
+        print("Model saved successfully.")
+    except Exception as e:
+        print(f"Error saving model: {e}")
 
 
 def main():
-    n_gram(2)
+    n_gram(3)
     print("Finished")
 
 if __name__ == '__main__':

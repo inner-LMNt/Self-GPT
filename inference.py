@@ -11,7 +11,7 @@ def bigram_inference():
     LLM = BigramLanguageModel()
     tokenizer = Tokenizer()
 
-    LLM.load_state_dict(torch.load('models/checkpoints/bigram/model.pth', weights_only=True))
+    LLM.load_state_dict(torch.load('models/checkpoints/bigram/shakespeare_model.pth', weights_only=True))
     context = "M"
     context = torch.tensor([tokenizer.encode(context)], dtype=torch.long, device=config.device)
     out = LLM.generate(context, 5000)
@@ -25,7 +25,7 @@ def trigram_inference():
     LLM = TrigramLanguageModel()
     tokenizer = Tokenizer()
 
-    LLM.load_state_dict(torch.load('models/checkpoints/trigram/model.pth', weights_only=True))
+    LLM.load_state_dict(torch.load('models/checkpoints/trigram/shakespeare_model.pth', weights_only=True))
     context = "Ma"
     context = torch.tensor([tokenizer.encode(context)], dtype=torch.long, device=config.device)
     out = LLM.generate(context, 5000)
@@ -36,8 +36,8 @@ def trigram_inference():
 
 
 def main():
-    bigram_inference()
-    # trigram_inference()
+    # bigram_inference()
+    trigram_inference()
     print("Finished")
 
 if __name__ == '__main__':
