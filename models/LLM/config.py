@@ -2,15 +2,15 @@ import torch
 import os
 import sys
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 from data.tokenizer import Tokenizer
 
 class Config:
     def __init__(self):
         # Model
         self.vocab_size = Tokenizer().vocab_size
-        self.context_length = 32 #128, 512
-        self.max_length = 1024
+        self.context_len = 32 #128, 512
+        self.inference_len = 1024
         self.embed_size = 64 # GPT-2 uses 768
         self.pdrop = 0.1
         self.num_layers = 12 # Transformer layers
@@ -21,7 +21,7 @@ class Config:
 
         # Training
         self.learning_rate = 1e-3 #5e-5
-        self.batch_size = 31 #16, 32
+        self.batch_size = 32
         self.num_epochs = 3
 
         # Data

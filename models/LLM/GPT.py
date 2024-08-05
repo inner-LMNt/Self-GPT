@@ -4,7 +4,7 @@ from torch.nn import functional as F
 import os
 import sys
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 from models.LLM.config import Config
 
 class GPT(nn.Module):

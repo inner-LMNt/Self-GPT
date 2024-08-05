@@ -4,7 +4,7 @@ from torch.nn import functional as F
 import os
 import sys
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 from models.LLM.config import Config
 
 class AttentionHead(nn.Module):
@@ -14,7 +14,7 @@ class AttentionHead(nn.Module):
         self.query = nn.Linear(self.config.embed_size, self.config.head_size, bias=False)
         self.key = nn.Linear(self.config.embed_size, self.config.head_size, bias=False)
         self.value = nn.Linear(self.config.embed_size, self.config.head_size, bias=False)
-        self.register_buffer("mask", torch.tril(torch.ones(self.config.context_length, self.config.context_length)))
+        self.register_buffer("mask", torch.tril(torch.ones(self.config.context_len, self.config.context_len)))
 
     def forward(self, x):
         B, T, C = x.shape
