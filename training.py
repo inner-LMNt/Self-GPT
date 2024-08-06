@@ -1,10 +1,7 @@
 import torch
 import json
 import time
-import os
-import sys
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 from models.LLM.config import Config
 from models.LLM.GPT import GPT
 from models.LLM.bigram import BigramLanguageModel, BigramNoAttention
@@ -21,6 +18,7 @@ def n_gram(number=2):
 
     model_name = "shakespeare_model"
     # model_name = "basic_model"
+    
     if number == 2:
         path = config.checkpoint_dir + f"/bigram/{model_name}.pth"
         LLM = BigramLanguageModel().to(config.device)

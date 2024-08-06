@@ -54,9 +54,9 @@ def trigram_inference(save=False):
 
 
 def main():
-    bigram_inference()
-    # trigram_inference()
-    print("Finished.")
+    # bigram_inference()
+    trigram_inference()
+    print("\nFinished.")
 
 if __name__ == "__main__":
     main()
