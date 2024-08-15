@@ -1,4 +1,3 @@
 .vs/
 data/__pycache__/
 models/LLM/__pycache__/
-models/checkpoints/gpt/*

@@ -73,7 +73,7 @@ def train_gpt():
     config = Config()
     torch.manual_seed(config.seed)
 
-    model_name = "GPT-2"
+    model_name = "GPT-mini"
     path = config.checkpoint_dir + f"/gpt/{model_name}.pth"
     LLM = GPT().to(config.device)
 
@@ -106,11 +106,11 @@ def train_gpt():
         optimizer.zero_grad(set_to_none=True)
         loss.backward() # Gradients
         optimizer.step() # Update weights
-        if epoch % 100 == 0:
+        if epoch % 1 == 0:
             print(f"Epoch {epoch}, Loss: {loss.item()}")
     
     print("\n______________________________________________________")
-    print(f"Training loss: {loss.item()}, Validation loss: {LLM.forward(*generate_batch(False))[1].item()}")
+    # print(f"Training loss: {loss.item()}, Validation loss: {LLM.forward(*generate_batch(False))[1].item()}") # Too slow
     print(f"Training time: {time.time() - start} seconds")
     print("______________________________________________________\n")
 

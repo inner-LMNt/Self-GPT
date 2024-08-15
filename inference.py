@@ -37,7 +37,7 @@ def gpt_inference(save=False):
     tokenizer = Tokenizer()
 
     GPT_model = GPT()
-    model_name = "GPT-2"
+    model_name = "GPT-mini"
     GPT_model.load_state_dict(torch.load(f"models/checkpoints/gpt/{model_name}.pth", weights_only=True))
     context = "Who"
 
@@ -53,7 +53,7 @@ def gpt_inference(save=False):
 
 def main():
     # n_gram_inference(n=2, save=True)
-    gpt_inference(save=False)
+    gpt_inference(save=True)
     print("\nFinished.")
 
 if __name__ == "__main__":
