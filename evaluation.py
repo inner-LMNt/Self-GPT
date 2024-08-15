@@ -42,6 +42,7 @@ def evaluate():
     
 
 def main():
+    print("Evaluating...")
     evaluate()
     print("\nFinished.")
 

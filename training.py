@@ -26,7 +26,7 @@ def train_n_gram(n=2):
         LLM = TrigramLanguageModel().to(config.device)
 
     try:
-        LLM.load_state_dict(torch.load(path, weights_only=True))
+        LLM.load_state_dict(torch.load(path, weights_only=True, map_location=config.device))
         print("Model loaded successfully:", path)
         print("Training...")
     except Exception as e:
@@ -78,7 +78,7 @@ def train_gpt():
     LLM = GPT().to(config.device)
 
     try:
-        LLM.load_state_dict(torch.load(path, weights_only=True))
+        LLM.load_state_dict(torch.load(path, weights_only=True, map_location=config.device))
         print("Model loaded successfully:", path)
         print("Training...")
     except Exception as e:
@@ -106,11 +106,11 @@ def train_gpt():
         optimizer.zero_grad(set_to_none=True)
         loss.backward() # Gradients
         optimizer.step() # Update weights
-        if epoch % 1 == 0:
+        if epoch % 100 == 0:
             print(f"Epoch {epoch}, Loss: {loss.item()}")
     
     print("\n______________________________________________________")
-    # print(f"Training loss: {loss.item()}, Validation loss: {LLM.forward(*generate_batch(False))[1].item()}") # Too slow
+    print(f"Training loss: {loss.item()}, Validation loss: {LLM.forward(*generate_batch(False))[1].item()}")
     print(f"Training time: {time.time() - start} seconds")
     print("______________________________________________________\n")
 
