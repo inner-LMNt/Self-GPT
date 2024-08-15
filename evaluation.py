@@ -3,8 +3,8 @@ import torch
 
 from models.LLM.config import Config
 from models.LLM.GPT import GPT
-from models.LLM.bigram import BigramLanguageModel, BigramNoAttention
-from models.LLM.trigram import TrigramLanguageModel, TrigramNoAttention
+from models.LLM.bigram import BigramLanguageModel
+from models.LLM.trigram import TrigramLanguageModel
 
 def load_json(file):
     with open(file, 'r') as f:
@@ -13,13 +13,12 @@ def load_json(file):
 
 def evaluate():
     config = Config()
-    model_type = "trigram"
-    model_name = "shakespeare_model"
-
-    path = config.checkpoint_dir + f"/{model_type}/{model_name}.pth"
 
     # Change based on model type
-    LLM = TrigramLanguageModel().to(config.device)
+    model_type = "bigram"
+    model_name = "new_model"
+    path = config.checkpoint_dir + f"/{model_type}/{model_name}.pth"
+    LLM = BigramLanguageModel().to(config.device)
 
     try:
         LLM.load_state_dict(torch.load(path, weights_only=True))
